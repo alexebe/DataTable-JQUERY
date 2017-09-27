@@ -6,7 +6,7 @@ $(document).ready(function() {
     } );
   
     // DataTable
-   var table= $('#jqueryDataTable').dataTable( {
+   var table= $('#jqueryDataTable').DataTable( {
         'bProcessing': false,
         'bServerSide': false,
         'sAjaxSource': './MyServlet',
@@ -20,7 +20,7 @@ $(document).ready(function() {
     } ); 
     
         // Apply the search
-    table.api().columns().every( function () {
+    table.columns().every( function () {
         var that = this;
  
         $( 'input', this.footer() ).on( 'keyup change', function () {
